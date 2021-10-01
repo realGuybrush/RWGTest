@@ -1,18 +1,18 @@
-﻿using UnityEngine;
+﻿using Gameplay.Helpers;
+using UnityEngine;
 
 namespace Gameplay.ShipSystems
 {
     public class MovementSystem : MonoBehaviour
     {
-
         [SerializeField]
-        private float _lateralMovementSpeed;
+        protected float _lateralMovementSpeed;
         
         [SerializeField]
-        private float _longitudinalMovementSpeed;
+        protected float _longitudinalMovementSpeed;
     
 
-        public void LateralMovement(float amount)
+        virtual public void LateralMovement(float amount)
         {
             Move(amount * _lateralMovementSpeed, Vector3.right);
         }
@@ -23,7 +23,7 @@ namespace Gameplay.ShipSystems
         }
 
         
-        private void Move(float amount, Vector3 axis)
+        protected void Move(float amount, Vector3 axis)
         {
             transform.Translate(amount * axis.normalized);
         }
