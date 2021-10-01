@@ -18,11 +18,15 @@ namespace Gameplay.Spaceships
         private WeaponSystem _weaponSystem;
 
         [SerializeField]
+        private HealthSystem _healthSystem;
+
+        [SerializeField]
         private UnitBattleIdentity _battleIdentity;
 
 
         public MovementSystem MovementSystem => _movementSystem;
         public WeaponSystem WeaponSystem => _weaponSystem;
+        public HealthSystem HealthSystem => _healthSystem;
 
         public UnitBattleIdentity BattleIdentity => _battleIdentity;
 
@@ -34,7 +38,7 @@ namespace Gameplay.Spaceships
 
         public void ApplyDamage(IDamageDealer damageDealer)
         {
-            Destroy(gameObject);
+            _healthSystem.GetDamage(damageDealer.Damage);
         }
 
     }
