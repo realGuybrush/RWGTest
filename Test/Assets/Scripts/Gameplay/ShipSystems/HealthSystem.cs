@@ -4,8 +4,12 @@ using UnityEngine;
 
 namespace Gameplay.ShipSystems
 {
+
     public class HealthSystem : MonoBehaviour
     {
+        [SerializeField]
+        private ScoreIncreaser score;
+
         [SerializeField]
         public float _maxHealth;
 
@@ -23,7 +27,10 @@ namespace Gameplay.ShipSystems
         {
             _health -= damage;
             if (_health <= 0)
+            {
+                score?.SendScoreIncreaseMessage();
                 Destroy(gameObject);
+            }
         }
     }
 }

@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 7280752513643992934}
   - component: {fileID: 5659333393718678246}
   - component: {fileID: 1387087252038566574}
+  - component: {fileID: 4721554787298583676}
   m_Layer: 0
   m_Name: EnemySpaceship
   m_TagString: Untagged
@@ -113,7 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6671edb3d37b87b4a9dad05317ca7b62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _representation: {fileID: 1507206475712916754}
   _lateralMovementSpeed: 50
   _longitudinalMovementSpeed: 10
 --- !u!114 &590599124999967758
@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f60560d2f1cf384c949d805973d9154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 4721554787298583676}
   _maxHealth: 100
   _health: 100
 --- !u!50 &7280752513643992934
@@ -204,6 +205,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _representation: {fileID: 1507206475712916754}
+--- !u!114 &4721554787298583676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590599124999967857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb5e47da2a2a9145aa65ee4a8dd5941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _thisUnitScore: 10
 --- !u!1 &1507206475712916752
 GameObject:
   m_ObjectHideFlags: 0
