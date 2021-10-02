@@ -24,5 +24,13 @@ namespace Gameplay.ShipSystems
             _weapons.ForEach(w => w.TriggerFire());
         }
 
+        public void BoostGuns(float boost, float boostTime)
+        {
+            for (int i = 0; i < _weapons.Count; i++)
+            {
+                _weapons[i].BoostWeapon(boost, boostTime);
+            }
+        }
+
     }
 }

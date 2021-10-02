@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7388036135692529381}
   - component: {fileID: 4265333833254256301}
   - component: {fileID: 7604392929340315775}
+  - component: {fileID: -4716550300463348346}
   m_Layer: 0
   m_Name: EnemySpaceship3
   m_TagString: Untagged
@@ -113,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 7604392929340315775}
+  powerups: {fileID: -4716550300463348346}
   _maxHealth: 100
   _health: 100
 --- !u!50 &5549564843199048549
@@ -188,6 +190,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _thisUnitScore: 20
+--- !u!114 &-4716550300463348346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2322824700351211634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f710da6c1fbb9c2439193e69597c76c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerups:
+  - {fileID: 4078054617639052935, guid: d12e57b733c6e504d874fe353f013128, type: 3}
+  - {fileID: 1086113919640360550, guid: 9bb722265a22e8440b2c865f14a4b53c, type: 3}
+  chances: 1e0000001e000000
 --- !u!1 &2322824700713389511
 GameObject:
   m_ObjectHideFlags: 0

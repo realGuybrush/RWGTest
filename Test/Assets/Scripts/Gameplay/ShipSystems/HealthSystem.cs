@@ -11,6 +11,9 @@ namespace Gameplay.ShipSystems
         private ScoreIncreaser score;
 
         [SerializeField]
+        private PowerupSpawner powerups;
+
+        [SerializeField]
         public float _maxHealth;
 
         [SerializeField]
@@ -28,6 +31,7 @@ namespace Gameplay.ShipSystems
             _health -= damage;
             if (_health <= 0)
             {
+                powerups?.SpawnPowerups();
                 score?.SendScoreIncreaseMessage();
                 Destroy(gameObject);
             }
