@@ -57,13 +57,7 @@ public class GameOverPanelManager : MonoBehaviour
 
     public void Restart()
     {
+        ScoreManager.totalPoints = 0;
         UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("SampleScene");
-        /*background.color = new Color(background.color.r, background.color.g, background.color.b, 0f);
-        gamePanel.gameObject.SetActive(true);
-        gameOverPanel.gameObject.SetActive(false);
-        background.gameObject.SetActive(false);
-        gameOverText.gameObject.SetActive(false);
-        scoreText.gameObject.SetActive(false);
-        restartButton.gameObject.SetActive(false);*/
     }
 }
