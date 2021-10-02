@@ -16,6 +16,8 @@ namespace Gameplay.Helpers
         
         public static bool IsInGameplayArea(Transform objectTransform, Bounds objectBounds)
         {
+            if(_camera == null)
+                _camera = Camera.main;
             var camHalfHeight = _camera.orthographicSize;
             var camHalfWidth = camHalfHeight * _camera.aspect;
             var camPos = _camera.transform.position;
@@ -35,6 +37,8 @@ namespace Gameplay.Helpers
 
         public static bool WillPlayerLeaveGameplayArea(Transform objectTransform, Bounds objectBounds, Vector3 shift)
         {
+            if (_camera == null)
+                _camera = Camera.main;
             var camHalfHeight = _camera.orthographicSize;
             var camHalfWidth = camHalfHeight * _camera.aspect;
             var camPos = _camera.transform.position;
